@@ -3,6 +3,8 @@ import time  #Para hacer pausas visibles
 from selenium.webdriver.common.by import By #Importamos la clase By para localizar elementos
 from selenium.webdriver.common.keys import Keys #Importamos la clase Keys para simular teclas especiales
 from selenium.webdriver.edge.options import Options #Importamos las opciones para Edge
+from selenium.webdriver.support.ui import WebDriverWait #Importamos WebDriverWait para esperas explícitas
+from selenium.webdriver.support import expected_conditions as EC #Importamos las condiciones esperadas para las esperas explícitas
 
 options = Options()
 options.add_argument("--start-maximized") #Abre ventana maximizada de Edge
@@ -40,10 +42,15 @@ try:
     #7. Detectar varios elementos de la interfaz
     boton_menu = driver.find_element(By.ID, "react-burger-menu-btn")
     print("Botón menú encontrado →", boton_menu.is_displayed())
-    #boton_carrito = driver.find_element(By.CLASS_NAME, "shopping_cart_link")
-    #print("Botón carrito encontrado →", boton_carrito.is_displayed())
-    #boton_product_container = driver.find_element(By.CLASS_NAME, "product_sort_container")
-    #print("Contenedor de productos encontrado →", boton_product_container.is_displayed())
+    boton_carrito = driver.find_element(By.CLASS_NAME, "shopping_cart_link")
+    print("Botón carrito encontrado →", boton_carrito.is_displayed())
+    boton_product_container = driver.find_element(By.CLASS_NAME, "product_sort_container")
+    print("Contenedor de productos encontrado →", boton_product_container.is_displayed())
+
+    #8 Entrar al carrito y verificar el producto añadido
+    driver.find_element(By.CLASS_NAME, "shopping_cart_link").click()
+    cart_item = WebDriverWait (driver, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, "cart_item")))
+    print("Producto en carrito OK →", cart_item.is_displayed())
 
     time.sleep(5)  #Pausa de 5s para que lo veas antes de cerrar
 
