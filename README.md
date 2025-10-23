@@ -1,5 +1,5 @@
-((Pequeño disclaimer, mi primer archivo fue el Test_swang_labs.py, ejecutaba las acciones y generaba el reporte, pero al ver los After y releer las consignas, pedian otros archivos y los tests divididos, como son los confest, helpers y varios test_. 
- Traté mediante los videos del after, las clases y con ayuda de la IA modificar el archivo original, dividirlo aunque me costó que se comuniquen entre ellos y las pruebas pasen))
+((Pequeño disclaimer, mi primer archivo fue el Test_swang_labs.py, ejecutaba las acciones abriendo el navegador sin problemas y generaba el reporte. Pero al ver los After, releer las consignas, pedian otros archivos y los tests divididos (como son los confest, helpers y varios test_)
+ Traté mediante los videos del after, las clases y con ayuda de la IA modificar el archivo original, dividirlo en varios test, aunque me costó que se comuniquen entre ellos y las pruebas pasen))
 
 1. Proposito del proyecto:
 Poner en práctica lo aprendido en la primera parte del Curso de Automatizacion de Testing, como la interacción con elementos web, estrategias de localización y validación de estados en una página. El sitio objetivo para esta automatización será saucedemo.com, una aplicación web demo especialmente diseñada para prácticas de testing.
