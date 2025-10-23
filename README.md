@@ -7,7 +7,11 @@ Pytest para estructura de testing
 Selenium WebDriver para automatización
 Git y GitHub para control de versiones
 
-3. Intrucciones de Instalación de dependencias
+3. Intrucciones de Instalación de dependencias:
+pytest --> pip pytest install 
+selenium --> pip selenium install 
+pytest html --> pip install html report
+Webdriver segun Navegador (Edge) 
 
 4. Comando para ejecutar pruebas:
 pytest -v --html=reporte.html
