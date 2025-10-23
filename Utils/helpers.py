@@ -5,9 +5,11 @@ from selenium.webdriver.common.by import By
 
 class login:
     URL = "https://www.saucedemo.com"
+    USERNAME_INPUT = (By.ID, "user-name")
+    PASSWORD_INPUT = (By.ID, "password")
     USERNAME = "standard_user"
     PASSWORD = "secret_sauce"
-    LOGIN_BUTTON = (By.ID, "login-button").click()
+    LOGIN_BUTTON = (By.ID, "login-button")
 
 def tiempo_espera (driver, locator, timeout=10):
     return WebDriverWait(driver, timeout).until(EC.visibility_of_element_located(locator))
@@ -18,4 +20,3 @@ class InventoryPageLocators:
     CART_BADGE = (By.CLASS_NAME, "shopping_cart_badge")
     CART_LINK = (By.CLASS_NAME, "shopping_cart_link")
     CART_ITEM = (By.CLASS_NAME, "cart_item")
-    
