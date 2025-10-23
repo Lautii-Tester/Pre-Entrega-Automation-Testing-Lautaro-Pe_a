@@ -8,10 +8,12 @@ Selenium WebDriver para automatización
 Git y GitHub para control de versiones
 
 3. Intrucciones de Instalación de dependencias:
-pytest --> pip pytest install 
-selenium --> pip selenium install 
-pytest html --> pip install html report
-Webdriver segun Navegador (Edge) 
+Python    --> http://python.org/downloads/           --> 3.14.0 version
+Pytest    --> pip install pytest                     --> 8.4.2 version
+Selenium  --> pip install selenium                   --> 4.36.0 version
+Pytest report-html --> pip install pytest-html
+Webdriver(Edge)--> (pagina oficial, windows edge, msedgedriver)--> 141.0.3537.92 version
+Git       --> https://git-scm.com/install/windows/   --> 2.51.0 version
 
 4. Comando para ejecutar pruebas:
-pytest -v --html=reporte.html
+pytest --html=reporte.html 
